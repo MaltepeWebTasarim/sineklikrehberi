@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --brand-green: #83bd81;
+  --brand-dark: #404e5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #404e5e;
+  -webkit-font-smoothing: antialiased;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #404e5e;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: #6b7a8d;
+  line-height: 1.7;
+}
+
+.btn-primary {
+  background-color: #83bd81;
+  color: #ffffff;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #6faa6d;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(131, 189, 129, 0.35);
+}
+
+.btn-secondary {
+  background-color: #404e5e;
+  color: #ffffff;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #2f3a47;
+  transform: translateY(-1px);
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e8ecf0;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  border-color: #83bd81;
+  box-shadow: 0 12px 40px rgba(131, 189, 129, 0.15);
+  transform: translateY(-3px);
+}
+
+.bg-brand-soft {
+  background-color: #f0f7f0;
+}
+
+.text-brand-green {
+  color: #83bd81;
+}
+
+.text-brand-dark {
+  color: #404e5e;
+}
+
+/* FAQ Accordion */
+.faq-item {
+  border: 1px solid #e8ecf0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  font-weight: 600;
+  color: #404e5e;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.975rem;
+  border: none;
+  transition: background 0.2s;
+}
+
+.faq-question:hover {
+  background: #f0f7f0;
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.25rem;
+  color: #556070;
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
+
+/* Sticky mobile bar */
+.mobile-cta-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.12);
+}
+
+@media (min-width: 768px) {
+  .mobile-cta-bar {
+    display: none;
+  }
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+table th {
+  background-color: #404e5e;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #e8ecf0;
+  color: #404e5e;
+}
+
+table tr:nth-child(even) td {
+  background-color: #f7faf7;
+}
+
+table tr:hover td {
+  background-color: #f0f7f0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #83bd81;
+  border-radius: 3px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

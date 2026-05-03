@@ -71,7 +71,6 @@ export default function FirmDirectory() {
               }`}
               style={{
                 borderColor: firma.featured ? "#83bd81" : "#e8ecf0",
-                ringColor: firma.featured ? "#83bd81" : "transparent",
               }}
             >
               {firma.featured && (
